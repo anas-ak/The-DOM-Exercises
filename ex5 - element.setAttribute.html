@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>element.setAttribute</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .turnRed {
+                color: red;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>element.attribute(attribute, value)</h1>
+
+        <p>
+            Using the element.setAttribute method, we 
+            can change the attribute value of an HTML element.
+        </p>
+
+        <h2 class='dude'> Hello World </h2>
+        
+        <p>
+            <span class='dude'>This Text Will Change</span>
+            <br>
+            <span>This Text Will Not Change</span>
+        </p>
+
+        <button onclick = 'funrun()'>Try It</button>
+
+        <p>The following link is dead. &nbsp;
+            <a id='w3c' href="" target="_blank">www.w3schools.com</a>
+        </p>
+        <p>Press the button to activate the link</p>
+        <button onclick='newRun()'>Activate Link</button>
+
+        <p>The following text field will become a button.</p>
+        <input id = 'boo' type="text" value='Text'>
+        <button onclick='buttonRun()'>Try It</button>
+
+        <script>
+            function funrun() {
+                var x = document.getElementsByClassName('dude');
+                for(var i = 0 ; i < x.length; i++) {
+                    x[i].setAttribute('class', 'turnRed');
+                }
+            }
+            function newRun() {
+                var b = document.getElementById('w3c');
+                b.setAttribute('href', 'https://www.w3schools.com');
+                b.setAttribute('target', '_self');
+                b.style.color = 'green';
+            }
+
+            function buttonRun() {
+                var c = document.getElementById('boo');
+                c.setAttribute('type', 'button');
+                c.style.color = 'white';
+                c.style.background= 'green';
+            }
+
+        </script>
+    </body>
+</html>

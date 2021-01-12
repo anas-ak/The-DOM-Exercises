@@ -1,0 +1,48 @@
+* {
+    font-family: lato;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+#sp{
+    background:rgb(235, 233, 233);
+    color: red;
+    font-family: monospace;
+}
+#code {
+    padding: 5px 5px 10px 5px;
+    background-color: rgb(68, 66, 66);
+    color: lime;
+    font-family: monospace;
+    width: 490px;
+}
+
+#img_box {
+    background-color: rgb(230, 225, 225);
+    margin: auto;
+    max-width: 500px;
+    padding: 2px 2px 6px 2px;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    max-width: 500px;
+}
+
+table {
+    text-align: left;
+    font-size: 13px;
+    border: solid 1px;
+}
+
+table td {
+    min-width: 290px;
+    border: solid 1px;
+}

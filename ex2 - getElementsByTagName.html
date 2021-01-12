@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>getElementsByTagName</title>
+    </head>
+    <body>
+        <h2>getElementsByTagName() method</h2>
+        <div class='row'>
+            <div class='column'>
+                <p>
+                    The getElementsByTagName() method returns a collection of all elements in the document with the specified tag name, as an HTMLCollection object.
+                </p>
+        
+                <p>
+                    <b>Tip:</b> You can use the length property of the HTMLCollection object to determine the number of elements with the specified tag name, then you can loop through all elements and extract the info you want.
+                </p>
+            </div>
+            <div class='column'>
+                <h3> An Unordered List for Breakfast </h3>
+                <ul>
+                    <li>Milk</li>
+                    <li>Coffee</li>
+                    <li>Sugar</li>
+                    <li>Eggs</li>
+                    <li>Bread</li>
+                    <li>Butter</li>
+                    <li>Salt</li>
+                    <li>Pepper</li>
+                </ul>
+
+                <h4>Spans</h4>
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+                <span>E</span>
+
+                <p>
+                    Click the button to find out how many breakfast items are listed
+                </p>
+                <button onclick="calculate()">Try It</button>
+                <i id='test'>___</i>
+
+                <p>
+                    Click the button to find out how many span elements are listed
+                </p>
+                <button onclick="calc_span()">Spans = </button>
+                <i id='answer'>___ </i>
+                    </div>
+            </div>
+        </div>
+        <script>
+            function calculate() {
+                var x = document.getElementsByTagName('li');
+                document.getElementById('test').innerHTML = x.length;
+            }
+            
+            function calc_span() {
+                var v = document.getElementsByTagName('span');
+                document.getElementById('answer').innerHTML = v.length;
+            }
+        </script>
+    </body>
+</html>

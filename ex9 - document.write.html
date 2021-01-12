@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>document.write() method</title>
+    </head>
+    <body>
+        <h1>document.write(text)</h1>
+
+        <p>
+            The write() method writes HTML expressions or JavaScript code 
+            to a document. Used mostly for testing, if it's used after an
+            HTML document has fully loaded, it will delete all existing HTML.
+        </p>
+
+        <p>
+            Note that write() does <b>NOT</b> add a new line after each statement.
+        </p>
+
+        <pre>
+        <script>
+        document.write('Hello World. ');
+        document.write('Have A Nice Day');
+        </script>
+        </pre>
+
+        <p>
+            Note that writeln() adds a new line after each statement.
+        </p>
+
+        <pre>
+        <script>
+        document.writeln('Hello World.');
+        document.writeln('Have A Nice Day');
+        </script>
+        </pre>
+
+    </body>
+</html>

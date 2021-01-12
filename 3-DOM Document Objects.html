@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>The DOM Notes - DOM Objects</title>
+    </head>
+    <body>
+       <a href="https://www.w3schools.com/js/js_htmldom_document.asp"><h1>The HTML DOM Document Object - Page 3</h1></a> 
+        <div class='row'>
+            <div class='column'>
+                <p>
+                    The HTML DOM document object is the owner of all other
+                    objects in your webpage.
+                </p>
+                <p>
+                    The document object represents <b>your web page</b> <br> <br>
+                    If you want to access any element in an HTML page, you always start with accessing the 
+                    document object. <br> <br>
+                    Below are some examples of how you can use the 
+                    document object to access and manipulate HTML.
+                </p>
+
+                <h4>Finding HTML Elements</h4>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>document.getElementById(id)</td>
+                        <td>Find an element by element id</td>
+                        
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>document.getElementsByTagName(name)</td>
+                        <td>Find elements by tag name</td>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>document.getElementsByClassName(name)</td>
+                        <td>Find elements by class name</td>
+                    </tr>
+                </table>
+
+                <h4>Changing HTML Elements</h4>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>element.innerHTML = new html content</td>
+                        <td>Change the inner HTML of an element</td>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>element.attribute = new value</td>
+                        <td>Change the attribute value of an HTML element</td>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>element.style.property = new style</td>
+                        <td>Change the style of an HTML element</td>
+                    </tr>
+
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>element.setAttribute(attribute, value)</td>
+                        <td>Change the attribute value of an HTML element</td>
+                    </tr>
+                </table>
+
+                <h4>Adding and Deleting Elements</h4>
+
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td >document.createElement(element)</td>
+                        <td>Create an HTML element </td>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td >document.removeChild(element)</td>
+                        <td>Remove an HTML element</td>
+                    </tr>
+
+                    <tr class='mdew'>
+                        <td>document.appendChild(element)</td>
+                        <td>Add an HTML element</td>
+                    </tr>
+                    
+                    <tr class='mdew'>
+                        <td>document.write(text)</td>
+                        <td>Write into the HTML output stream</td>
+                    </tr>
+                </table>
+
+                <h4>Adding Event Handlers</h4>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr>
+                        <td>document.getElementById(id).onclick = function(){<i>code</i>}</td>
+                        <td>Adding event handler code to an onclick event</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementsByClassName('mdew');
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.background = 'pink';
+                x[i].style.color = 'blue';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementsByClassName</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .example {
+                border: 1px solid black;
+                margin: 5px;
+                background: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>getElementsByClassName() method</h2>
+        <div class='row'>
+            <div class='column'>
+                <p>
+                    The getElementsByClassName() method returns a collection of all elements in the document with the specified class name, as an HTMLCollection object.
+                </p>
+        
+                <p>
+                    <b>Tip:</b> You can use the length property of the HTMLCollection object to determine the number of elements with the specified class name, then you can loop through all elements and extract the info you want.
+                </p>
+            </div>
+            <div class='column'>
+                <div class='example'>A Div With class = 'example'</div>
+                
+                <div class='example'>Yet Another Div with class = 'example'</div>
+
+                <p class='example'> A Paragraph with class = 'example'</p>
+
+                <p>This is a <span class='example'>span</span> element with class='example' inside a paragraph.</p>
+
+                <p>
+                    The following button runs the following bit of JavaScript code: 
+
+                    <div id='code'>
+                        function funrun() {     <br>
+                        &nbsp;    var x = document.getElementsByClassName('example'); <br>
+                        &nbsp;    for (var i = 0; i < x.length; i++) {    <br>
+                            &nbsp;&nbsp;        x[i].style.background = 'yellow';   <br>
+                        &nbsp;    }   <br>
+                        }
+                    </div>
+                </p>
+
+                <p>Click the button to change the color of all elements with class='example'</p>
+
+                <button class='example' onclick='funrun()'>Run Example</button>
+            </div>
+            <script>
+                function funrun() {
+                    var x = document.getElementsByClassName('example');
+                    for (var i = 0; i < x.length; i++) {
+                        x[i].style.background = 'yellow';
+                    }
+                }
+            </script>
+    </body>
+</html>

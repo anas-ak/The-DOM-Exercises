@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>document.appendChild()</title>
+    </head>
+    <body>
+        <h1>document.appendChild() method</h1>
+
+        <p>
+            The document.appendChild() method appends a node as the 
+            last child of a node.
+        </p>
+
+        <p>
+            <b>Tip:</b> If you want to create a new paragraph, 
+            with text, remember to create the text as a Text Node,
+            which you append to the paragraph, <i>then</i> append the paragraph to the document.
+        </p>
+
+        <p>
+            You can also use this method to move an element from 
+            one element to another.
+        </p>
+
+        <ul id='myList'>
+            <li>Coffee</li>
+            <li>Tea</li>
+        </ul>
+
+        <p>Click the button to append an item to the end of the list.</p>
+        <button onclick = 'addItem()'>Try It</button>
+
+        <div id='code' style='margin-top: 20px;'>
+            function addItem() {    <br>
+            &nbsp;var node = document.createElement('li');    <br>
+            &nbsp;var textNode = document.createTextNode('Lassi');    <br>
+            &nbsp;node.appendChild(textNode);     <br>
+            &nbsp;document.getElementById('myList').appendChild(node); <br>
+            }
+        </div>
+
+        <script>
+            function addItem() {
+                var node = document.createElement('li');
+                var textNode = document.createTextNode('Lassi');
+                node.appendChild(textNode);
+                document.getElementById('myList').appendChild(node);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>element.attribute</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>element.attribute = new value</h1>
+
+        <p>
+            Using the element.attribute property, we 
+            can change the attribute value of an HTML element.
+        </p>
+        <button onclick = 'funrun()'>Try it</button>
+        <p>
+            <span id='dude'>This Text Will Become Bold</span>
+            <br>
+            <span>This Text Will Also Become Bold</span>
+        </p>
+
+        <script>
+            function funrun() {
+                var x = document.getElementsByTagName('span');
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.fontWeight = 'bolder';
+                }
+            }
+        </script>
+    </body>
+</html>

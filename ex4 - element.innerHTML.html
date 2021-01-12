@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>element.innerHTML</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>element.innerHTML = new HTML content</h1>
+
+        <p>
+            Using the element.innerHTML property, we 
+            can change the innerHTML of an element.
+        </p>
+        <button onclick = 'funrun()'>Try it</button>
+        <p>
+            <span id='dude'>This Text Will Change</span>
+            <br>
+            <span>This Text Will Also Change</span>
+        </p>
+
+        <script>
+            function funrun() {
+                var x = document.getElementsByTagName('span');
+                for (var i = 0; i < x.length; i++) {
+                    x[i].innerHTML = 'Success!'
+                }
+            }
+        </script>
+    </body>
+</html>

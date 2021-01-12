@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementById</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            p {
+                font-family: lato;
+                font-size: 20px;
+                background: yellow;
+                padding: 30px;
+                color: red;
+                width: 400px;
+            }
+
+            button {
+                padding: 15px;
+                background: green;
+                color: white;
+                font: courier;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h2>getElementById() method</h2>
+        <p id='demo'> Click the button to change the color of this paragraph.</p>
+        
+        <button onclick="myFunction()">Try It</button>
+        <script>
+            function myFunction() {
+                document.getElementById('demo').style.color='yellow';
+                document.getElementById('demo').style.background='purple';
+                document.getElementById('demo').innerHTML = 'Voila!'
+            }
+        </script>
+    </body>
+</html>
+
+<!-- BREAK -->
+

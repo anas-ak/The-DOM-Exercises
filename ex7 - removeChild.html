@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>HTML DOM removeChild() method</h1>
+
+        <p>
+        The removeChild() method removes a specified node of the specified element. <br> <br>
+        
+        Returns the removed node as a Node object, 
+        or <i>null</i> if the node does not exist.
+        </p>
+
+        <p>
+            <b>Note:</b>
+            The removed child is no longer part of the DOM. However, with the reference returned by this method, it's possible to insert the 
+            removed child to an element at a later time.
+        </p>
+
+        <p>
+            <b>Tip:</b>
+            Use the appendChild() or insertBefore() method to insert the removed node into the same document.
+        </p>
+        
+        <ul id='myList'>
+            <li>Sugar</li>
+            <li>Milk</li>
+            <li>Coffee</li>
+            <li>Eggs</li>
+            <li>Bread</li>
+            <li>Butter</li>
+            <li>Salt</li>
+            <li>Pepper</li>
+        </ul>
+
+        <p>
+            Click the button to see if the list 
+            has any child nodes. If so, remove its 
+            first child node (index = 0).
+        </p>
+
+        <button onclick='remChild()'>Try It</button>
+
+        <div id='code' style='margin-top: 20px;'>
+            function remChild() { <br>
+                &nbsp; var x = document.getElementById('myList'); <br> <br>
+                &nbsp; if(x.hasChildNodes) { <br>
+                    &nbsp;&nbsp;    x.removeChild(x.firstChild); // or x.childNodes[0]  <br>
+                &nbsp;&nbsp;}   <br>
+            }
+        </div>
+
+        <script>
+            function remChild() {
+                var x = document.getElementById('myList');
+                if(x.hasChildNodes) {
+                    x.removeChild(x.firstChild); /* or x.childNodes[0] */
+                }
+            }
+        </script>
+    </body>
+</html>

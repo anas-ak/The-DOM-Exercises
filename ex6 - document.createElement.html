@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #myDiv {
+                border: 1px solid;
+                padding: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>document.createElement() Method</h1>
+        <div class="row">
+            <div class="column">
+                <p>
+                    The createElement() method creates an Element Node, with the specified name. 
+                </p>
+        
+                <p>
+                    <b>Tip:</b> After the element is created, use the <u> element.appendChild()</u> or <u>element.insertBefore()</u> methods <br> to insert it into the document.
+                </p>
+
+                <p> Example: </p>
+            
+                <div id='code'>
+                    var para = document.createElement('p'); <br>
+                    para.innerText = 'This is a paragraph'; <br>
+                    document.body.appendChild(para);
+                </div>
+
+                <div id='myDiv'>
+                    <p>This Div has id = 'myDiv'</p>
+                    <p>We're going to create a function that adds a paragraph element inside this Div, <br> everytime we click a button</p>
+                </div>
+
+                <button onclick='addPara()'>Add Paragraph</button>
+            </div>
+                <script>
+                    function addPara() {
+                        var x = document.createElement('p');
+                        x.innerHTML = 'This is a paragraph';
+                        x.style.background = 'yellow';
+                        document.getElementById('myDiv').appendChild(x);
+                    }
+                </script>
+        </div>
+    </body>
+</html>

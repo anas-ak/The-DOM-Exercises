@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DOM Notes - DOM Methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='row'>
+        <div class='column'>
+
+            <a href="https://www.w3schools.com/js/js_htmldom_methods.asp"><h1>Methods & Properties - Page 2</h1></a>
+            
+            <p>
+                HTML DOM methods are <b>actions</b> you can perform (on HTML elements); <br> <br>
+                HTML DOM properties are <b>values</b> (of 
+                HTML elements) that you can set or change.
+            </p>
+
+            <div id='img_box'>
+                <img src="interface.png" alt="dom-interface">
+            </div>
+
+            <h3>The DOM Programming Interface</h3>
+            <p>
+                The HTML DOM can be accessed with JavaScript 
+                (and with other programming languages). 
+                <br><br>
+                In the DOM, all HTML elements are defined as <b>objects</b>.
+                <br><br>
+                The programming interface is the properties 
+                and methods of each object.
+                <br><br>
+                A <b>property</b> is a value that you can get 
+                or set (like changing the content of an HTML 
+                element.
+                <br><br>
+                A <b>method</b> is an action you can do (like 
+                add or deleting an HTML element).
+            </p>
+        </div>
+        <div class="column">
+
+            <h2>The getElementById Method</h2>
+            <p>
+                The most common way to access an HTML element is to use the <span id='sp'>id</span> of the element. <br> <br>   
+
+                In the example above, the <span id='sp'>getElementById</span> method used <span id='sp'>id = 'demo'</span> to find the element.
+            </p>
+
+            <h3>Example</h3>
+            <p>
+                The following example changes the content (the <span id='sp'>innerHTML</span>) of the <span id='sp'>&lt;p&gt;</span> element with <span id='sp'>id = 'demo'</span>
+            </p>
+            <div id='code'>
+                &lt;html&gt;    <br>
+                &nbsp; &lt;body&gt;    <br>
+                &nbsp; &nbsp;&lt;p id="demo"&gt;[Input]&lt;/p&gt;    <br>
+                &nbsp;&nbsp;&lt;script&gt;  <br>
+                &nbsp; &nbsp; &nbsp;document.getElementById('demo').innerHTML = 'WHOA!!'    <br>
+                        &nbsp;&nbsp;&lt;/script&gt; <br>
+                &nbsp;&lt;/body&gt;   <br>
+                &lt;/html&gt;   
+            </div>
+
+            <h3>The innerHTML Property</h3>
+            <p>
+                The easiest way to access the content of an element 
+                is by using the <span id='sp'> innerHTML </span> property. <br> <br>
+                The <span id='sp'> innerHTML</span> property is useful for getting or replacing the content of 
+                HTML elements.
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>
