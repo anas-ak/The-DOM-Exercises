@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toggle-Display</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            #myDiv {
+                background: cornflowerblue;
+                font-family: lato;
+                font-size: 20px;
+                max-width: 500px;
+                padding: 0 0 5px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Toggle-Display</h1>
+
+        <p>
+            The display property sets or returns the element's display type.
+        </p>
+        <p>
+
+            Elements in HTML are mostly "inline" or "block" elements: An inline element has floating content on its left and right side. A block element fills the entire line, and nothing can be displayed on its left or right side.
+        </p>
+
+        <div id='myDiv'>
+            I am but a humble DIV.
+        </div>
+        <br>
+        <button onclick='myFunction()'>Boom!</button>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById('myDiv');
+
+                if(x.style.display == 'block') {
+                    x.style.display = ' none';
+                } else {
+                    x.style.display = ' block';
+                }
+            }
+        </script>
+    </body>
+</html>
