@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>document.replaceChild() method</title>
+    </head>
+    <body>
+        <h1>document.replaceChild(new, old) method</h1>
+
+        <p>
+            The replaceChild(new, old) method replaces a chid with a new node.
+        </p>
+        <p>
+            The new node should be an existing node in the document, or you can create a new node.
+        </p>
+
+        <p>
+            Upon clicking the 'Replace' button, the first item is replaced.
+        </p>
+        <ul id="myList">
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+            <li>Item 04</li>
+            <li>Item 05</li>
+            <li>Item 06</li>
+            <li>Item 07</li>
+        </ul>
+        <button onclick="myFunction()">Replace</button>
+
+        <p><strong>Note:</strong>
+            This example replaces the entire LI element.
+        </p>
+
+        <script>
+            function myFunction() 
+            {
+                var textNode = document.createTextNode("Water");
+                var elmnt = document.createElement("li");
+                elmnt.appendChild(textNode);
+
+                var item = document.getElementById("myList");
+                item.replaceChild(elmnt, item.childNodes[1]);    
+            }
+        </script>
+    </body>
+</html>
