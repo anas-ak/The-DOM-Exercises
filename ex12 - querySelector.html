@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>querySelector() method</title>
+    </head>
+    <body>
+        <h1>document.querySelector() method</h1>
+
+        <p>
+            The querySelector() method returns the first element that 
+            matches a specified CSS selector(s) in the document. 
+        </p>
+        <p>
+            <strong>Note:</strong>
+            The querySelector() method ONLY returns the first element 
+            that matches the specified selectors. To return all the 
+            matches, use the <u>querySelectorAll()</u> method instead.
+        </p>
+        <p>
+            If the selector matches an ID in document that is used several 
+            times (Note that an 'id' should be unique within a page and 
+            should not be used more than once), it returns the first 
+            matching element.
+        </p>
+
+        <ul id = 'test'>
+            <li id = 'toast'>Milk</li>
+            <li>Eggs</li>
+            <li>Sugar</li>
+        </ul>
+
+        <p>Click the button to add a background color to 
+            the first &lt;p&gt; element in the document.
+        </p> 
+
+        <p>
+            And the TEST button, gives anything with id = 'test', 
+            a green background and font-color to red.
+        </p>
+
+        <p>
+            The Toast button replaces the text of the passed element to 'Hello World', if it has id = 'toast'.
+        </p>
+
+        <button onclick="myFunction()">Just Do It</button>
+    
+        <button onclick="otherFunction()">TEST</button>
+
+        <button onclick='runToast()'>Toast</button>
+
+        <script>
+            function myFunction() {
+                document.querySelector('p').style.background = 'red';
+                document.querySelector('p').style.color = 'yellow';
+            }
+
+            function otherFunction() {
+                document.querySelector('#test').style.background = 'lime';
+                document.querySelector('#test').style.color = 'red';
+            }
+
+            function runToast() {
+                document.querySelector('#toast').innerHTML = 'Hello World';
+            }
+        </script>
+    </body>
+</html>

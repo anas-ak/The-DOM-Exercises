@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>querySelectorAll() method</title>
+    </head>
+    <body>
+        <h1 class='boo'>document.querySelectorAll() method</h1>
+
+        <p>
+            The querySelectorAll() method returns all elements in the
+            document that matches a specified CSS selector(s), as a 
+            static NodeList object. 
+        </p>
+
+        <p class='example'>
+            The NodeList object represents a collection of nodes. 
+            The nodes can be accessed by index numbers. The index starts at 0.
+        </p>
+
+        <p class='boo'>
+            <strong>Note: </strong>
+            You can use the <u>length</u> property of the NodeList object 
+            to determine the number of elements that matches the specified 
+            selector, then you can loop through all elements and extract 
+            the info you want.
+        </p>
+
+        <h3 class='boo'>Syntax</h3>
+        <p style="background-color: darkblue; color: cyan; padding-bottom: 3px;" class='example'>
+            document.querySelectorAll(CSS selectors)
+        </p>
+
+        <p class='example'>
+            Examples? --- > Find out how many elements with class ='example' there are in this document.
+        </p>
+
+        <p>
+            Red Paint --- > Turn all elements with class='boo' red
+        </p>
+        <br>
+    
+        <button onclick="runPs()">Examples?</button> &nbsp; 
+        <span id='allPs'></span>
+
+        <br><br>
+        <button onclick='redPaint()'>Red Paint</button>
+
+        <script>
+            function runPs() {
+                var x = document.querySelectorAll('.example').length;
+                console.log('The examples are '+ x);
+                document.getElementById('allPs').innerHTML = x;
+            }
+
+            function redPaint() {
+                var y = document.querySelectorAll('.boo');
+                for(var i = 0; i < y.length; i++) {
+                    y[i].style.color = 'red';
+                }
+            }
+        </script>
+    </body>
+</html>
