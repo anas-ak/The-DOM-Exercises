@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>The DOM Notes - Changing HTML</title>
+    </head>
+    <body>
+        <a href="https://www.w3schools.com/js/js_htmldom_html.asp"><h1>JavaScript HTML DOM - Page 4</h1></a>
+
+        <h2>Changing the HTML Output Stream</h2>
+
+        <p>
+            JavaScript can create dynamic HTML content. <br>
+            In JavaScript, <span id='sp'>document.write()</span> can be used to write directly to the HTML stream. <br> <br>
+            For example, the date and time below are going to update everytime
+            this page is loaded.
+        </p>
+
+        <b>
+            <script>
+                document.write(Date());
+            </script>
+        </b>
+        <p>
+            <strong>Note:</strong> Never use <span id='sp'>document.write()</span> after the document is loaded. It will overwrite the document.
+        </p>
+
+        <span>/*===========================================*/</span>
+
+        <h2> Changing HTML Content </h2>
+
+        <p>
+            The easiest way to modify the content of an HTML element is by 
+            using the <span id='sp'>innerHTML</span> property.
+        </p>
+
+        <p>
+            To change the content of an HTML element, use this syntax : <br><br>
+            <span id='code'>
+                document.getElementById('someID').innerHTML = 'newHTML';
+            </span>
+        </p>
+        <span>/*===========================================*/</span>
+        <p>
+            This example changes the content of a &lt;p&gt; element.
+        </p>
+
+        <button onclick ='funChange()'>Change Me</button>
+        <p id='boo' style="color: red;">
+            Some unoriginal content made by uninspired people. 
+            <script>
+                function funChange() {
+                    document.getElementById('boo').innerHTML = 'Laughin gas, these hazmats...fast cats'
+                }
+            </script>
+        </p>
+        <p>
+            So what happens: <br>
+            <ul>
+                <li>The HTML document above contains a &lt;p&gt; element with id  = 'boo'</li>
+                <li>We use the HTML DOM to get the element with id = 'boo'</li>
+                <li>JavaScript changes the content if that element to 'new HTML'</li>
+            </ul>
+        </p>
+        <span>/*===========================================*/</span>
+
+        <h2>Changing the Value of an Attribute</h2>
+        
+        <p>To change the value of an HTML attribute, use this syntax: </p>
+        <span id='code'>
+            document.getElementById('id').attribute = newValue;
+        </span>
+        
+        <p>This example changes the value of the src attribute of an &lt;img&gt; element</p>
+
+        
+        <img id = 'cartoon' src='bb.png' style="width:150px;" alt='bugsBunny'>
+        <button onclick='changeBB()'>Change Me</button>
+        <script>
+            function changeBB() {
+                document.getElementById('cartoon').src = 'dd.png'
+            }
+        </script>
+    </body>
+</html> 
+    

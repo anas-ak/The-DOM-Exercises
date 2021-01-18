@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Reacting to Events</title>
+    </head>
+    <body>
+        <a href="https://www.w3schools.com/js/js_htmldom_events.asp">
+            <h1>JavaScript HTML DOM Events - Page 6</h1>
+        </a>
+
+        <h2>Reacting to Events</h2>
+
+        <p>
+            A JavaScript can be executed when an event occurs, like when 
+            a user clicks on an HTML element.
+        </p>
+        <p> 
+            To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute: <br> <br>
+
+            <span id='code'>
+                onclick = <i>JavaScript</i>
+            </span>
+        </p>
+
+        Examples of HTML events: 
+        <ul>
+            <li>When a user clicks the mouse</li>
+            <li>When a webpage is loaded</li>
+            <li>When an image is loaded</li>
+            <li>When the mouse hovers over an element</li>
+            <li>When an input field is changed</li>
+            <li>When an HTML form is submitted</li>
+            <li>When a user strokes a key</li>
+        </ul>
+
+        <p>
+            In this example, the content of the &lt;span&gt; element is changed when a user clicks on it.
+        </p>
+        <p id='code'>
+            &lt;span onclick="this.innerHTML = 'Hello!'"&gt;Click Me!&lt;/span&gt;
+        </p>
+
+        <span style='border: solid 1px' onclick = 'this.innerHTML = "Hello!"'>Click Me!</span>
+
+        <p>
+            In this example, a function is called from the event handler.
+        </p>
+
+        <p id = 'code'>
+            &lt;h1 onclick="changeText(this)"&gt;Click on this text!&lt;/h1&gt; <br>
+            &lt;script&gt;  <br>
+            &nbsp;    function changeText(id) {  <br>
+            &nbsp;&nbsp;        id.innerHTML = "Oh Yeah!";  <br>
+            &nbsp;    }   <br>
+            &lt;/script&gt; <br>
+        </p>
+
+        <h1 style = 'border: solid 1px;' onclick='changeText(this)'>Click On This Text</h1>
+        <script>
+            function changeText(id) { id.innerHTML = 'Oh Yeah!' }
+        </script>
+
+        <h2>HTML Event Attributes</h2>
+
+        <p>
+            To assign events to HTML elements, you can use event attributes:
+        </p>
+
+        <button onclick="displayDate()">The time is...</button>
+        <span id="demo"></span>
+        <script> 
+            function displayDate() { 
+                document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
+
+        <h2>Assign Events Using the HTML DOM</h2>
+
+        <p>
+            The HTML DOM allows you to assign events to HTML elements using 
+            JavaScript.
+        </p>
+
+        <button id='tin'>Press Me!</button>
+        <span id='carpet'></span>
+        <script>
+            document.getElementById('tin').onclick = showMessage;
+            function showMessage() {
+                document.getElementById('carpet').innerHTML = "Hello, my name is Anas";
+            }
+        </script>
+
+        <p>
+            In the above example, a function named 
+            <span id='sp'>showMessage</span> is assigned to an HTML element 
+            with the <span id='sp'>id='tin'</span> 
+            <br><br>
+            The function will be executed when the button is clicked
+        </p>
+
+        <h2>The onchange Event</h2>
+
+        <p>
+            The <span id='sp'>onchange</span> event is often used in 
+            combination with validation of input fields. <br>
+            
+            Below is an example of how to use the onchange.
+        </p>
+
+        <p>
+            When you leave the input field, the <span id='sp'>upSize()</span> function function is triggered which transforms the input text to uppercase.
+        </p>
+
+        Enter some data: <input type="text" name="lala" id="lala" onchange=upSize()>
+       
+        <script>
+            function upSize() {
+                var x = document.getElementById('lala');
+                x.value = x.value.toUpperCase();
+            }
+        </script>
+
+        <h2>The onmouseover and onmouseout Events</h2>
+
+        <p>
+            The <span id='sp'>onmouseover</span> and <span id='sp'>onmouseout</span> events can be used to trigger a function when the user mouses over, or out of, an HTML 
+            element.
+        </p>
+
+        <span style='font-size: 40px;
+                     padding: 10px 10px 10px 10px; 
+                     background:red;
+                     color: white'
+              onmouseover='mOver(this)' onmouseout='mOut(this)'>Hover Over Me
+        </span>
+        <script>
+            function mOver(obj) {obj.innerHTML = 'Sup!'}
+
+            function mOut(obj) {obj.innerHTML = 'Hover Over Me'}
+        </script>
+
+        <h2>The onmousedown, onmouseup and onclick Events</h2>
+
+        <p>
+            The <span id='sp'>onmousedown</span>, 
+                <span id='sp'>onmouseup</span> and 
+                <span id='sp'>onclick</span> events are all parts of a 
+                mouse-click.
+        </p>
+        <p>
+            First, when a mouse-button is clicked, the <span id='sp'>onmousedown</span> event is triggered. <br> 
+
+            Then, when the mouse-button is released the <span id='sp'>
+            onmouseup</span> event is triggered.    <br>
+
+            Finally, when the mouse-click is completed, the <span id='sp'>
+            onclick</span> event is triggered.
+        </p>
+
+        <span style='font-size: 40px;
+                     padding: 10px 10px 10px 10px; 
+                     background:red;
+                     color: white'
+              onmousedown="mDown(this)" onmouseup = "mUp(this)">Click Me
+        </span>
+        <script>
+            function mDown(obj) {
+                obj.style.background = 'indigo';
+                obj.innerHTML = 'RELEASE ME THIS INSTANT!!';
+            }
+
+            function mUp(obj) {
+                obj.innerHTML = 'Click Me'
+            }
+        </script>
+    </body>
+</html>
